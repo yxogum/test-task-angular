@@ -1,0 +1,19 @@
+<table class="table">
+
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <ng-container *ngFor="let person of people">
+      <tr *ngIf="person.type === currentTab">
+        <td>{{person.name.first}} {{person.name.last}}</td>
+        <td>{{person.amount}}</td>
+      </tr>
+    </ng-container>
+  </tbody>
+
+</table>
